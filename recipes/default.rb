@@ -32,6 +32,7 @@ unless File.exist? "/usr/local/bin/chruby-exec"
   end
 
   cookbook_file "/etc/profile.d/chruby.sh" do
+    mode   0744
     backup false
     action :create_if_missing
   end
